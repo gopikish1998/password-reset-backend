@@ -68,7 +68,7 @@ app.post('/register', async function (req,res){
         let token = jwt.sign({ id: data.insertedId }, process.env.JWT_SECRET)
         // console.log(data.insertedId)
         let transporter = nodemailer.createTransport({
-            service:"gmail",
+            service:"hotmail",
             auth: {
               user: process.env.user, 
               pass: process.env.pass,
@@ -202,7 +202,7 @@ app.post('/forgot',async function(req,res){
         
         // console.log(data.insertedId)
         let transporter = nodemailer.createTransport({
-            service:"gmail",
+            service:"hotmail",
             auth: {
               user: process.env.user, 
               pass: process.env.pass,
